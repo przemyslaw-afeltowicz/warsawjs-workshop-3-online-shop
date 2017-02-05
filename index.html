@@ -7,20 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WarsawJS Workshop #3 :: Shop Online</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src="app/index.js"></script>
+    <script src="app/services/products.service.js"></script>
+    <script src="app/services/cart.service.js"></script>
+    <script src="app/components/ProductComponent.js"></script>
+    <script src="app/components/CartComponent.js"></script>
+    <script src="app/components/ProductsListComponent.js"></script>
+    <script src="app/components/ShopComponent.js"></script>
+
+
+
+
 </head>
-<body ng-app="shop" ng-controller="IntroController">
-    <!--<shop></shop>-->
-    <input type="text" ng-model="inputModel.value">
-    <h1>{{inputModel.value}}</h1>
-    <ul>
-        <li ng-repeat="item in itemsList">{{item}}</li>
-    </ul>
+<body ng-app="shop">
 
-    <intro-directive obj-prop="testObj" text-prop="{{testText}}" fn-prop="callback(content)"></intro-directive>
+<shop-component></shop-component>
 
-    <div style="width: 100px; height: 100px; background-color: red;" ng-if="cbox" ></div>
+
 </body>
 </html>
