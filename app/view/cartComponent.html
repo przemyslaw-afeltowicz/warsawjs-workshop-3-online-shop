@@ -1,0 +1,7 @@
+Koszyk
+<div ng-repeat="item in $ctrl.items.list">
+
+    <div>{{item.name}}</div>
+    <button ng-click="$ctrl.removeProduct(item.id)">Usuń</button>
+
+</div>
