@@ -1,0 +1,9 @@
+<a ng-link="['ProductDetail', {id: $ctrl.album.id}]">
+    <img ng-src="{{$ctrl.album.images[0].url}}" alt="{{$ctrl.album.name}}" width="100%">
+</a>
+<h3>{{$ctrl.album.name}}</h3>
+<input type="number" ng-model="$ctrl.quantity" min="1">
+
+<button class="btn btn-primary" ng-disabled="$ctrl.disabled" ng-click="$ctrl.addToCart($event)">Dodaj do koszyka</button>
+
+

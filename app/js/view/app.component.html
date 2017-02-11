@@ -1,0 +1,16 @@
+<nav class="navbar navbar-toggleable-xl navbar-inverse bg-inverse">
+    <div class="container">
+        <a ng-class="{active:$ctrl.isActive('/')}" class="navbar-brand" ng-link="['/ShopComponent/']">Sklep z muzyką</a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a ng-class="{active:$ctrl.isActive('/')}" class="nav-link" ng-link="['/ShopComponent/']">Sklep</a>
+                </li>
+                <li class="nav-item">
+                    <a ng-class="{active:$ctrl.isActive('/cart')}" class="nav-link" ng-link="['/CartComponent/']">Koszyk ({{$ctrl.cartService.getCart().length}})</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<ng-outlet></ng-outlet>

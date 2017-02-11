@@ -2,7 +2,7 @@
 
     class ShopComponent {
         constructor(){
-            this.templateUrl = 'app/view/shopComponent.html';
+            this.templateUrl = 'js/view/shop.component.html';
         }
 
     }

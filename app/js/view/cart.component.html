@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Koszyk</h2>
+    <!--<div ng-repeat="item in $ctrl.items track by $index">-->
+    <!--<a ng-link="['ProductDetail', {id: item.product.id}]">{{item.product.name}}</a>-->
+    <!--<span>{{item.quantity}}</span>-->
+    <!--<button ng-click="$ctrl.removeProduct(item.product)">Usuń</button>-->
+    <!--</div>-->
+
+    <div class="alert alert-info" role="alert" ng-if="$ctrl.items.length <= 0">
+        <strong>Twój koszyk jest pusty!</strong> Przejdź do żeby coś dodać do koszyka.
+    </div>
+
+    <table class="table table-striped" ng-if="$ctrl.items.length > 0">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Nazwa albumu</th>
+            <th>Ilość</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $ctrl.items track by $index">
+            <td>
+                <a ng-link="['ProductDetail', {id: item.product.id}]">
+                    <img ng-src="{{item.product.images[0].url}}" height="60px" alt="">
+                </a>
+            </td>
+            <td>
+                {{item.product.name}}
+                <p><b>{{item.product.artists[0].name}}</b></p>
+            </td>
+            <td><input type="number" value="{{item.quantity}}"></td>
+            <td><button class="btn btn-danger" ng-click="$ctrl.removeProduct(item.product)" >&times</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
